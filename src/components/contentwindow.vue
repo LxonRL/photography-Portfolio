@@ -2,30 +2,30 @@
   <div class='row col-xl-12 col-lg-12 col-xs-12'>
     <div class='row col-lg-6 col-xs-12'>
       <div class='row col-lg-12 col-xs-12'>    
-        <hr class='car-name-divider'>
+        <hr class='sport-name-divider'>
       </div>
       <div class='row'>
-        <p class='car-name'> MTV Barum </p>
+        <p class='sport-name'> MTV Barum </p>
       </div>
-      <div v-on:click="showCase('mtv-2')" class='row col-lg-12 col-xs-12 justify-end'>
+      <div v-on:click="showCase('mtvbarum')" class='row col-lg-12 col-xs-12 justify-end'>
         <i class="arrow material-icons md-48">trending_flat</i>          
       </div> 
-      <q-img class='car-image'
+      <q-img class='sport-image'
         :src="require('../assets/pictures/mtv-2.jpg')"
         spinner-color="black"
       />
     </div>
     <div class='row col-lg-6 col-xs-12'>
       <div class='row col-lg-12 col-xs-12'>    
-        <hr class='car-name-divider'>
+        <hr class='sport-name-divider'>
       </div>
       <div class='row'>
-        <p class='car-name'> SVG Lüneburg </p>
+        <p class='sport-name'> SVG Lüneburg </p>
       </div>
-      <div v-on:click="showCase('svg-main')" class='row col-lg-12 col-xs-12 justify-end'>
+      <div v-on:click="showCase('svg_lueneburg')" class='row col-lg-12 col-xs-12 justify-end'>
         <i class="arrow material-icons md-48">trending_flat</i>          
       </div> 
-      <q-img class='car-image'
+      <q-img class='sport-image'
         :src="require('../assets/pictures/svg-main.jpg')"
         spinner-color="black"
       />
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style>
-.car-name-divider{
+.sport-name-divider{
   width: 50px;
   max-width: 50px;
   border-top: 2px solid rgb(49,53,58);
@@ -69,14 +69,14 @@ export default {
   margin-top: 15px;
 }
 
-.car-name{
+.sport-name{
   max-height: 30px;
   padding-left: 50px;
   color: rgb(49,53,58);
   margin-bottom: 10px;
 }
 
-.car-image{
+.sport-image{
   max-height: 470px;
   z-index: -10;
 }

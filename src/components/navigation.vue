@@ -1,7 +1,7 @@
 <template>
   <div class='navigation-bar row col-xl-12 col-lg-12 col-xs-12'>
     <div class='row col-xl-1 col-lg-2 col-sm-12 col-xs-12 justify-center'>
-      <p class='navigation-item text' v-on:click="navigate('')">{{this.$store.getters.getSitename}}</p>
+      <p class='navigation-item text' v-on:click="navigate('')">LEON TONHÄUSER</p>
     </div>
 
     <div class='row col-xl-8 col-lg-7 col-sm-4 col-xs-12'>

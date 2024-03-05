@@ -1,7 +1,7 @@
 <template>
   <div class='row col-lg-12 col-xs-12 justify-center'>
     <div class='row col-lg-12 col-xs-12 justify-center'>
-      <p class='showcase-name'> {{this.Name}} </p>
+      <p class='showcase-sport-name'> {{this.sportName}} </p>
     </div>
 
     <div class='row col-lg-12 col-xs-12 justify-center'>
@@ -19,14 +19,14 @@
 
     <div class='row col-lg-12 col-xs-12 justify-center' v-for="photos in showcasePhotos" :key="photos.id" >
       <div class='row col-lg-12 col-xs-10 justify-center'>
-        <q-img v-if="photos.orientation == 'L'" class='col-lg-6 showcase-car-image justify-center'
+        <q-img v-if="photos.orientation == 'L'" class='col-lg-6 showcase-sport-image justify-center'
           :src="require('../assets/pictures/' + photos.photo)"
           spinner-color="black"
         />
       </div>
 
       <div class='row col-lg-4 col-xs-10 justify-center'>
-        <q-img v-if="photos.orientation == 'P'" class='col-lg-10 showcase-car-image'
+        <q-img v-if="photos.orientation == 'P'" class='col-lg-10 showcase-sport-image'
           :src="require('../assets/pictures/' + photos.photo)"
           spinner-color="black"
         />
@@ -43,7 +43,7 @@ export default {
 
   data () {
     return {
-      Name: '',
+      sportName: '',
       instagramName: '',
       showcasePhotos: [],
     }
@@ -52,7 +52,7 @@ export default {
   methods: {
     getShowcaseInformation(){
       var info = this.$store.getters.getShowcase
-      this.Name = info.Name;
+      this.sportName = info.sportName;
       this.instagramName = info.instagramName;
       this.showcasePhotos = info.photos;
     }
@@ -82,14 +82,14 @@ export default {
   color: black;
 }
 
-.showcase-name{
+.showcase-sport-name{
   font-size: 25px;
   max-height: 30px;
   color: rgb(49,53,58);
   margin-bottom: 10px;
 }
 
-.showcase-car-image{
+.showcase-sport-image{
   margin-top: 20px;
   margin-bottom: 20px;
 }

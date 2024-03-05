@@ -1,12 +1,12 @@
 <template>
   <div class='row full-width'>
-    <div class='main-content row col-lg-12'>
+    <div class='main-content row col-lg-12' smooth-scroll :duration="1000">
       <div v-if='isMobile != true' class='main-content-left row col-xl-5 col-lg-5 col-xs-12 justify-center'>
         <h1 class='main-content-left-text'> SPORT <br> FOTOGRAFIE </h1>
       </div>
       <div class='row col-xl-7 col-lg-7'>
         <div class='row col-lg-12'>
-          <h1 class='header-text'> {{this.$store.getters.getSitename}} </h1>
+          <h1 class='header-text'> LEON TONHÄUSER </h1>
         </div>
         <div class='row col-lg-8'>
           <h1 class='story-text'>
@@ -37,16 +37,7 @@ export default {
     isMobile: function() {
       return this.$store.getters.isMobile;
     }
-  },
-
-  beforeMount(){
-    // Scrolling is disabled for the frontpage, only enable scrolling for mobile users
-    if (this.$store.getters.isMobile == true){
-      document.body.style.overflow = 'unset'
-    } else {
-      document.body.style.overflow = 'hidden'
-    }
-  },
+  }
 }
 </script>
 

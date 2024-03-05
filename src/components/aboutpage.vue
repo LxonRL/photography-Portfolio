@@ -1,11 +1,11 @@
 <template>
   <div class='main-text-about row col-lg-8 col-xs-8 justify-center'>
     <div class='row col-lg-12 col-xs-12 justify-center'>
-      <p class='header-text'>{{this.$store.getters.getSitename}}</p>
+      <p class='header-text'>ÜBER MICH</p>
     </div>
     <div class='story-text-about row col-lg-6 col-xs-10 justify-center'>
       <p> 
-        Mein Name ist [Dein Name], und meine Leidenschaft für die Fotografie begann mit einer Kamera
+        Mein Name ist Leon Tonhäuser, und meine Leidenschaft für die Fotografie begann mit einer Kamera
         und einem spontanen Testspiel zwischen dem MTV Barum und TSV Wrestedt im Sommer 2023. 
         Dieses Ereignis markierte den Beginn meiner Reise durch die faszinierende Welt der Sportfotografie.
         <br>

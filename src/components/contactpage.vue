@@ -1,23 +1,24 @@
 <template>
   <div class='main-contact-text row col-lg-12 col-xs-12 justify-center'>
     <div class='contact-text row col-lg-12 col-xs-12 justify-center'>
-      <p> Kontaktiere mich {{this.$store.getters.getSitename}} auf meinen Social Media Kanälen! </p>
+      <p> Kontaktiere mich auf meinen Social Media Kanälen! </p>
     </div>
-    <div class="row col-lg-2 col-xs-4">
+    <div class="row col-lg-2 col-xs-2">
       <hr class='divider'>
     </div>
-      <div class='row col-lg-6 col-xs-6'>
+    <div class="row col-lg-1 col-sm-2 col-xs-2">
+      <div class='row col-lg-2 col-xs-2'>
         <a target="_blank" rel="noopener noreferrer" v-bind:href="instagramUrl">
           <font-awesome-icon class='social-media-icons instagram' :icon="['fab', 'instagram']" />
         </a>
       </div>
     </div>
-    <div class="row col-lg-2 col-xs-4">
+    <div class="row col-lg-2 col-xs-2">
       <hr class='divider'>
     </div>
     <div class='email-text row col-lg-12 col-xs-10 justify-center'>
       <!-- Change your email here -->
-      <p> or e-mail {{this.$store.getters.getSitename}} at leon@tonhaeuser.cloud </p>
+      <p> oder per Mail an leon@tonhaeuser.cloud </p>
     </div>
   </div>
 </template>
@@ -56,8 +57,8 @@ template {
 
 .social-media-icons{
   font-size: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
   cursor: pointer;
 }
 
