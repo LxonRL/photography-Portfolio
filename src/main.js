@@ -6,10 +6,10 @@ import store from './store.js'
 import router from './router.js'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faFontAwesome, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFontAwesome, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faFontAwesome, faFacebookSquare, faInstagram)
+library.add(faFontAwesome, faInstagram)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

@@ -15,10 +15,10 @@
       <p class='navigation-item text' v-on:click="navigate('portfolio')">Portfolio</p>
     </div>
     <div class='row col-xl-1 col-lg-1 col-sm-12 col-xs-12 justify-center'>
-      <p class='navigation-item text' v-on:click="navigate('about')">About</p>
+      <p class='navigation-item text' v-on:click="navigate('about')">Über mich</p>
     </div>
     <div class='row col-xl-1 col-lg-1 col-sm-12 col-xs-12 justify-center'>
-      <p class='navigation-item text' v-on:click="navigate('contact')">Contact</p>
+      <p class='navigation-item text' v-on:click="navigate('contact')">Kontakt</p>
     </div>
   </div>
 </template>

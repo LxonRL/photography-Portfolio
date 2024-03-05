@@ -4,15 +4,19 @@
       <p class='header-text'>{{this.$store.getters.getSitename}}</p>
     </div>
     <div class='story-text-about row col-lg-6 col-xs-10 justify-center'>
-      <p> It all really started in 2016, when one of my friends got a Nissan Silvia. He invited me to several events, which got me really hooked on car events.
+      <p> 
+        Mein Name ist [Dein Name], und meine Leidenschaft für die Fotografie begann mit einer Kamera
+        und einem spontanen Testspiel zwischen dem MTV Barum und TSV Wrestedt im Sommer 2023. 
+        Dieses Ereignis markierte den Beginn meiner Reise durch die faszinierende Welt der Sportfotografie.
         <br>
         <br>
-        I started visiting car related events more often, private meets, JapFest, Historic Grand Prix, Blancpain, Nürburgring, Spa Francorchamps and many more, 
-        not just only events related to Japanese cars. However CARZOKU only really focusses on the Japanese cars.
+        Seitdem habe ich die Ehre, die atemberaubenden Momente und die Leidenschaft des Sports einzufangen,
+        insbesondere bei der SVG Lüneburg und dem MTV Barum. Meine Kamera ist mein ständiger Begleiter,
+        wenn ich die Action auf dem Spielfeld einfange und die emotionalen Höhepunkte der Spieler und Teams festhalte.
 
         <br>
         <br>
-        Don't feel afraid to contact me if you would like some photo's taken of your car.
+        Jede Aufnahme erzählt eine einzigartige Geschichte  – von den Highlights bis zu den kleinen Momenten!
       </p>
     </div>
   </div>

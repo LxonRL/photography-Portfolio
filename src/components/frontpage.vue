@@ -2,7 +2,7 @@
   <div class='row full-width'>
     <div class='main-content row col-lg-12'>
       <div v-if='isMobile != true' class='main-content-left row col-xl-5 col-lg-5 col-xs-12 justify-center'>
-        <h1 class='main-content-left-text'> AUTOMOTIVE <br> PHOTOGRAPHY </h1>
+        <h1 class='main-content-left-text'> SPORT <br> FOTOGRAFIE </h1>
       </div>
       <div class='row col-xl-7 col-lg-7'>
         <div class='row col-lg-12'>
@@ -10,11 +10,11 @@
         </div>
         <div class='row col-lg-8'>
           <h1 class='story-text'>
-            A combination of the English word 'car' and the romaji for 家族 (family).
-            Carzoku is all about Japanese cars and culture, old school or new school.
+            Auf dem Fußballplatz tanzen die Sonnenstrahlen über dem jubelnden Siegtor, 
+            während gleichzeitig in der Sporthalle das intensive Krachen des Volleyballs den Kampf zweier Teams um jeden Punkt verkündet. 
             <br>
             <br>
-            I will try to capture as much content by myself as I can.
+            Zwei Sportwelten, eine Leidenschaft.
           </h1>
         </div>
       </div>

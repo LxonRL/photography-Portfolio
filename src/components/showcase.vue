@@ -1,7 +1,7 @@
 <template>
   <div class='row col-lg-12 col-xs-12 justify-center'>
     <div class='row col-lg-12 col-xs-12 justify-center'>
-      <p class='showcase-car-name'> {{this.carName}} </p>
+      <p class='showcase-name'> {{this.Name}} </p>
     </div>
 
     <div class='row col-lg-12 col-xs-12 justify-center'>
@@ -43,7 +43,7 @@ export default {
 
   data () {
     return {
-      carName: '',
+      Name: '',
       instagramName: '',
       showcasePhotos: [],
     }
@@ -52,7 +52,7 @@ export default {
   methods: {
     getShowcaseInformation(){
       var info = this.$store.getters.getShowcase
-      this.carName = info.carName;
+      this.Name = info.Name;
       this.instagramName = info.instagramName;
       this.showcasePhotos = info.photos;
     }
@@ -82,7 +82,7 @@ export default {
   color: black;
 }
 
-.showcase-car-name{
+.showcase-name{
   font-size: 25px;
   max-height: 30px;
   color: rgb(49,53,58);

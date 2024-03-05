@@ -5,13 +5,13 @@
         <hr class='car-name-divider'>
       </div>
       <div class='row'>
-        <p class='car-name'> Nissan S13 </p>
+        <p class='car-name'> MTV Barum </p>
       </div>
-      <div v-on:click="showCase('s13s13whiteboi')" class='row col-lg-12 col-xs-12 justify-end'>
+      <div v-on:click="showCase('mtv-2')" class='row col-lg-12 col-xs-12 justify-end'>
         <i class="arrow material-icons md-48">trending_flat</i>          
       </div> 
       <q-img class='car-image'
-        :src="require('../assets/pictures/s13s13whiteboi1.jpg')"
+        :src="require('../assets/pictures/mtv-2.jpg')"
         spinner-color="black"
       />
     </div>
@@ -20,13 +20,13 @@
         <hr class='car-name-divider'>
       </div>
       <div class='row'>
-        <p class='car-name'> Toyota AE86 Levin </p>
+        <p class='car-name'> SVG Lüneburg </p>
       </div>
-      <div v-on:click="showCase('ae86fuego_hachiroku')" class='row col-lg-12 col-xs-12 justify-end'>
+      <div v-on:click="showCase('svg-main')" class='row col-lg-12 col-xs-12 justify-end'>
         <i class="arrow material-icons md-48">trending_flat</i>          
       </div> 
       <q-img class='car-image'
-        :src="require('../assets/pictures/ae86fuego_hachiroku1.jpg')"
+        :src="require('../assets/pictures/svg-main.jpg')"
         spinner-color="black"
       />
     </div>

@@ -5,27 +5,27 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: () => ({
-      sitename: 'CARZOKU',
+      sitename: 'SPORT',
       isMobile: null,
-      currentShowcaseName: 's13s13whiteboi',
+      currentShowcaseName: 'mtvbarum',
 
       showcases: [
         {
-          showcaseName: 's13s13whiteboi',
-          carName: 'Nissan S13',
-          instagramName: 's13whiteboi',
-          photos: [{photo: 's13s13whiteboi1.jpg', orientation: 'L'},
-                   {photo: 's13s13whiteboi2.jpg', orientation: 'P'},
-                   {photo: 's13s13whiteboi3.jpg', orientation: 'P'},
-                   {photo: 's13s13whiteboi4.jpg', orientation: 'P'}]
+          showcaseName: 'mtvbarum',
+          Name: 'MTV Barum',
+          instagramName: 'mtvbarum',
+          photos: [{photo: 'mtv_1.jpg', orientation: 'L'},
+                   {photo: 'mtv-2.jpg', orientation: 'P'},
+                   {photo: 'mtv-az-1.jpg', orientation: 'P'},
+                   {photo: 'mtv-ii-2.jpg', orientation: 'P'}]
         },
         {
-          showcaseName: 'ae86fuego_hachiroku',
-          carName: 'Toyota AE86',
-          instagramName: 'fuego_hachiroku',
-          photos: [{photo: 'ae86fuego_hachiroku1.jpg', orientation: 'L'},
-                   {photo: 'ae86fuego_hachiroku2.jpg', orientation: 'P'},
-                   {photo: 'ae86fuego_hachiroku3.jpg', orientation: 'P'}]
+          showcaseName: 'svg_lueneburg',
+          carName: 'SVG Lüneburg',
+          instagramName: 'svg_lueneburg',
+          photos: [{photo: 'svg-1.jpg', orientation: 'L'},
+                   {photo: 'svg,2.jpg', orientation: 'P'},
+                   {photo: 'svg-3.jpg', orientation: 'P'}]
         }
       ]
     }),
