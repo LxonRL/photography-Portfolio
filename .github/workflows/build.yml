@@ -46,28 +46,6 @@ jobs:
         if [[ -d "build" ]]; then
           SOURCEPATH=build
         fi
-        octo pack \
-         --basePath ${SOURCEPATH} \
-         --outFolder ${OUTPUTPATH} \
-         --id photography-Portfolio \
-         --version ${{ steps.determine_version.outputs.semVer }} \
-         --format zip \
-         --overwrite \
-         --include '**/*.html' \
-         --include '**/*.htm' \
-         --include '**/*.css' \
-         --include '**/*.js' \
-         --include '**/*.min' \
-         --include '**/*.map' \
-         --include '**/*.sql' \
-         --include '**/*.png' \
-         --include '**/*.jpg' \
-         --include '**/*.jpeg' \
-         --include '**/*.gif' \
-         --include '**/*.json' \
-         --include '**/*.env' \
-         --include '**/*.txt' \
-         --include '**/*.Procfile'
       shell: bash
     - name: Tag Release
       uses: mathieudutour/github-tag-action@v6.1
@@ -83,10 +61,10 @@ jobs:
         draft: ${{ github.ref == 'refs/heads/master' && 'false' || 'true' }}
         name: ${{ github.ref == 'refs/heads/master' && 'false' || 'true' }}
     - name: Upload Release Asset
-      uses: softprops/action-gh-release@v1
+      uses: actions/upload-artifact@v2
       with:
-        tag_name: ${{ steps.determine_version.outputs.semVer }}+run${{ github.run_number }}-attempt${{ github.run_attempt }}
-        files: photography-Portfolio.${{ steps.determine_version.outputs.semVer }}.zip
+          name: Artifacts
+          path: . # Upload all files in the current directory
 permissions:
   id-token: write
   checks: write
