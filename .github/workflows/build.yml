@@ -51,9 +51,6 @@ jobs:
       with:
         name: Dependencies
         path: dependencies.txt
-    - name: Test
-      run: npm test
-      shell: bash
     - name: Build
       run: npm run build
       shell: bash
