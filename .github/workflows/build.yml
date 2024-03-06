@@ -54,37 +54,6 @@ jobs:
     - name: Build
       run: npm run build
       shell: bash
-    - name: Package
-      run: |-
-        SOURCEPATH=.
-        OUTPUTPATH=.
-        # If there is a build directory, assume that is what we want to package
-        if [[ -d "build" ]]; then
-          SOURCEPATH=build
-        fi
-        octo pack \
-         --basePath ${SOURCEPATH} \
-         --outFolder ${OUTPUTPATH} \
-         --id photography-Portfolio \
-         --version ${{ steps.determine_version.outputs.semVer }} \
-         --format zip \
-         --overwrite \
-         --include '**/*.html' \
-         --include '**/*.htm' \
-         --include '**/*.css' \
-         --include '**/*.js' \
-         --include '**/*.min' \
-         --include '**/*.map' \
-         --include '**/*.sql' \
-         --include '**/*.png' \
-         --include '**/*.jpg' \
-         --include '**/*.jpeg' \
-         --include '**/*.gif' \
-         --include '**/*.json' \
-         --include '**/*.env' \
-         --include '**/*.txt' \
-         --include '**/*.Procfile'
-      shell: bash
     - name: Tag Release
       uses: mathieudutour/github-tag-action@v6.1
       with:
