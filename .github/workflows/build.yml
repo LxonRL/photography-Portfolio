@@ -1,22 +1,9 @@
-# For a detailed breakdown of this workflow, see https://octopus.com/docs/guides/deploy-node-app/to-nginx/using-octopus-onprem-github-builtin
-#
-# The following workflow provides an opinionated template you can customize for your own needs.
-#
-# If you are not an Octopus user, the "Push to Octopus", "Generate Octopus Deploy build information",
-# and "Create Octopus Release" steps can be safely deleted.
-#
-# To configure Octopus, set the OCTOPUS_API_TOKEN secret to the Octopus API key, and
-# set the OCTOPUS_SERVER_URL secret to the Octopus URL.
-#
-# Double check the "project" and "deploy_to" properties in the "Create Octopus Release" step
-# match your Octopus projects and environments.
-#
-# Get a trial Octopus instance from https://octopus.com/start
-
 name: Node.js Build
-'on':
+
+on:
   workflow_dispatch: {}
   push: {}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,23 +23,17 @@ jobs:
       uses: gittools/actions/gitversion/execute@v0.9.15
       with:
         additionalArguments: /overrideconfig mode=Mainline
-    - name: Install Octopus Deploy CLI
-      uses: OctopusDeploy/install-octopus-cli-action@v1
-      with:
-        version: latest
     - name: Install Dependencies
-      run: npm ci
+      run: npm ci --omit=dev
       shell: bash
     - name: List Dependencies
-      run: npm list --all > dependencies.txt
+      id: list_dependencies
+      run: |
+        npm list --all > dependencies.txt
+        echo "::set-output name=semVer::$(jq -r '.dependencies | keys[] as $k | "\($k)@\(.[$k].version)"`"' dependencies.txt)"
       shell: bash
-    - name: Collect Dependencies
-      uses: actions/upload-artifact@v2
-      with:
-        name: Dependencies
-        path: dependencies.txt
     - name: Build
-      run: npm run build
+      run: npm run build --omit=dev
       shell: bash
     - name: Tag Release
       uses: mathieudutour/github-tag-action@v6.1
@@ -63,16 +44,13 @@ jobs:
       name: Create Release
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: ${{ steps.determine_version.outputs.semVer }}+run${{ github.run_number }}-attempt${{ github.run_attempt }}
-        release_name: Release ${{ steps.determine_version.outputs.semVer }} Run ${{ github.run_number }} Attempt ${{ github.run_attempt }}
+        tag_name: ${{ steps.list_dependencies.outputs.semVer }}+run${{ github.run_number }}-attempt${{ github.run_attempt }}
+        release_name: Release ${{ steps.list_dependencies.outputs.semVer }} Run ${{ github.run_number }} Attempt ${{ github.run_attempt }}
         draft: ${{ github.ref == 'refs/heads/master' && 'false' || 'true' }}
         name: ${{ github.ref == 'refs/heads/master' && 'false' || 'true' }}
-    - name: Upload Release Asset
-      uses: softprops/action-gh-release@v1
+    - name: Upload Build Output
+      uses: actions/upload-artifact@v2
       with:
-        tag_name: ${{ steps.determine_version.outputs.semVer }}+run${{ github.run_number }}-attempt${{ github.run_attempt }}
-        files: photography-Portfolio.${{ steps.determine_version.outputs.semVer }}.zip
-permissions:
-  id-token: write
-  checks: write
-  contents: write
+        name: build-output
+        path: photography-Portfolio/
+        outputArtifact: false
