@@ -46,6 +46,14 @@ jobs:
         if [[ -d "build" ]]; then
           SOURCEPATH=build
         fi
+        octo pack \
+        --basePath ${SOURCEPATH} \
+        --outFolder ${OUTPUTPATH} \
+        --id photography-Portfolio \
+        --version ${{ steps.determine_version.outputs.semVer }} \
+        --format zip \
+        --overwrite \
+        --include '**/*'
       shell: bash
     - name: Tag Release
       uses: mathieudutour/github-tag-action@v6.1
