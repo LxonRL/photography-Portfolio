@@ -26,12 +26,6 @@ jobs:
     - name: Install Dependencies
       run: npm ci --omit=dev
       shell: bash
-    - name: List Dependencies
-      id: list_dependencies
-      run: |
-        npm list --all > dependencies.txt
-        echo "::set-output name=semVer::$(jq -r '.dependencies | keys[] as $k | "\($k)@\(.[$k].version)"`"' dependencies.txt)"
-      shell: bash
     - name: Build
       run: npm run build --omit=dev
       shell: bash
